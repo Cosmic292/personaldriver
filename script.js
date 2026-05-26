@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // You can add Formspree or other backend logic here later
             
-            alert("✅ Booking request sent successfully to cosmincosmic68@gmail.com!\n\nI will contact you shortly.");
+            alert("✅ Booking request sent successfully !\n\nI will contact you shortly.");
             
             hideBookingModal();
             this.reset();
