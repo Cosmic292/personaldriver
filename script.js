@@ -1,7 +1,7 @@
 // script.js - With EmailJS Integration
 
 // Initialize EmailJS (Replace with your actual User ID)
-emailjs.init("YOUR_EMAILJS_USER_ID");   // ←←← Change this!
+emailjs.init("IBAm_uW3wigFxl7kF");   // ←←← Change this!
 
 // Show Booking Modal
 function showBookingModal() {
