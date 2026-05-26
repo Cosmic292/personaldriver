@@ -1,7 +1,6 @@
-// script.js - With EmailJS Integration
+// script.js - EmailJS Integration
 
-// Initialize EmailJS (Replace with your actual User ID)
-emailjs.init("IBAm_uW3wigFxl7kF");   // ←←← Change this!
+emailjs.init("IBAm_uW3wigFxl7kF");
 
 // Show Booking Modal
 function showBookingModal() {
@@ -15,7 +14,7 @@ function hideBookingModal() {
     if (modal) modal.classList.add('hidden');
 }
 
-// Handle Form Submission with EmailJS
+// Form Submission with EmailJS
 document.addEventListener('DOMContentLoaded', function() {
     const bookingForm = document.getElementById('bookingForm');
 
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            // Get form values
             const params = {
                 from_name: document.querySelector('input[name="name"]').value,
                 from_email: document.querySelector('input[name="email"]').value,
@@ -34,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 to_email: "cosmincosmic68@gmail.com"
             };
 
-            // Send email using EmailJS
             emailjs.send("service_bl9oojc", "template_6sonmze", params)
                 .then(function(response) {
                     alert("✅ Email Sent Successfully!");
@@ -42,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     bookingForm.reset();
                 })
                 .catch(function(error) {
-                    alert("❌ Failed to send email. Please try again later.");
-                    console.error('EmailJS Error:', error);
+                    console.error("EmailJS Error:", error);
+                    alert("❌ Failed to send email. Please try again.\n\nError: " + error.text);
                 });
         });
     }
